@@ -71,3 +71,7 @@ The tool provides clear, colored output showing:
 - Status of uncommitted changes
 - Status of unpushed commits
 - Success/failure of operations
+
+---
+
+*This code was created with [Claude](https://claude.ai) AI assistant.*
