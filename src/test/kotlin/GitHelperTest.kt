@@ -76,7 +76,8 @@ class GitHelperTest {
         File(repo, "a.txt").writeText("one")
         run("git", "add", ".", workingDir = repo)
         run("git", "commit", "-m", "first", workingDir = repo)
-        run("git", "push", "-u", "origin", "main", workingDir = repo)
+        val currentBranch = run("git", "rev-parse", "--abbrev-ref", "HEAD", workingDir = repo)
+        run("git", "push", "-u", "origin", currentBranch, workingDir = repo)
 
         val helper = GitHelper()
         assertFalse(helper.hasUnpushedCommits(repo))
