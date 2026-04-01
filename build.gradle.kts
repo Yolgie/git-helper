@@ -1,27 +1,20 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.25")
-    }
+plugins {
+    kotlin("jvm") version "1.9.25"
+    application
 }
-
-apply(plugin = "org.jetbrains.kotlin.jvm")
-apply(plugin = "application")
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    "testImplementation"(kotlin("test"))
+    testImplementation(kotlin("test"))
 }
 
 application {
     mainClass.set("GitHelperKt")
 }
 
-tasks.test {
+tasks.withType<Test>().configureEach {
     useJUnitPlatform()
 }
