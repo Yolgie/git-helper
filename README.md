@@ -24,12 +24,6 @@ Run via Gradle:
 gradle run --args="<command> [base_directory]"
 ```
 
-Or run the script directly:
-
-```bash
-kotlin GitHelper.kts <command> [base_directory]
-```
-
 ### Commands
 
 - `status` - Show status of all Git repositories
