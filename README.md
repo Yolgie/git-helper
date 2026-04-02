@@ -12,7 +12,7 @@ A Kotlin command-line tool for batch Git operations across multiple repositories
 
 ## Prerequisites
 
-- Java SDK installed
+- Java 21+ SDK installed (project toolchain targets Java 21)
 - Gradle 8+
 - Git installed and configured
 

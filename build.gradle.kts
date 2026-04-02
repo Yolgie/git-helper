@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.25"
+    kotlin("jvm") version "2.0.21"
     application
 }
 
@@ -9,6 +9,10 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+}
+
+kotlin {
+    jvmToolchain(21)
 }
 
 application {
